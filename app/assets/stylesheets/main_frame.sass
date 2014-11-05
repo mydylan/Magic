@@ -1,0 +1,72 @@
+@import bourbon
+
+@mixin flex_box
+  @include display(flex)
+  @include justify-content(space-between)
+
+
+.project_wrapper
+  background-image: url(background.png) 
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+
+
+.project_main_frame
+  @include flex_box
+  padding: 200px 0 100px 380px
+  // .project_logo
+  //   float:right
+  //   margin: 0 20.8%
+  //   img
+  //     position: relative
+  //     top: 0
+  //     left: 0
+  //     display: block 
+.video_case
+  position: relative
+  @include flex(auto)
+
+  video
+    max-width: 40%
+    margin: 0 auto
+    position: relative
+    display: block
+    top: 20px
+    left: 20px
+    border: 3px solid black
+
+
+
+.project_about_game
+  width: 40%
+  margin: 0 0 0 630px
+
+p
+  font-family: Narkisim
+  color:  #e5f3ff
+  font-size: 18px
+  font-weight: 400
+  line-height: 26px
+  text-shadow: 1px 3px 0px #3f516c
+  text-align: left
+.subtitle
+  font-size: 36px
+  text-align: center
+  margin: 10px 0 0 0
+
+
+.platforms
+  @include flex_box
+  .downloads
+    img
+      @include flex(auto)
+      width: 145px
+      margin: 0 auto
+      max-width: 90%
+
+
+.windows
+  margin: 0 auto
+  width: 192px
+  

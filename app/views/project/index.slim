@@ -1,23 +1,26 @@
-doctype 5
-html
-  head
-    meta charset="utf-8"
-    meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    meta name="description" content="Magic Zone"
-    title Magic Zone
-    = stylesheet_link_tag "application", media: "all"
-    //= csrf_meta_tags
-  
-  body
-    .project_wrapper
-      p hello page
-//loading screen
-
-//main page
-    / = render partial: 'project/project'
-    / main role="main"
-    /   = yield
-    / = render partial: 'project/footer'
-
-    / = javascript_include_tag "application", "async" => Rails.env.production?
+.project_wrapper
+  .project_main_frame
+    .video_case
+      video  controls='controls' width='375px' height='225px' poster='video_screen.png'
+        source src='#'
+      / video tag
+  .project_about_game
+    p.subtitle The Game 
+    p.description 
+      | Running Shadow is a unique mix of a runner and fantasy RPG. Along with the simple game mechanics typical of this game type, it has a mythical plot full of secrets and intrigue.
+      br/
+      br/
+      | You will try on the role of a fortunate thief and assassin in possession of a unique artifact: the Gauntlet of the Celestial Guardian stolen from the adepts of a dark and ancient cult. You will be gifted with wondrous and unique abilities, too. Get ready for an unending adventure full of risk: age-old castles, gloomy dungeons and treacherous enemy ambushes, dozens of most fascinating levels and unique quests. Enter the path full of danger and win the title of Master Shadow!
+    .links
+      .platforms
+        .downloads
+          img.app_store alt='#' src='assets/app_store.png'
+        .downloads
+          img.google_play alt='#' src='assets/google_play.png'
+    .windows
+      img.windows alt='#' src='assets/windows.png'
+  / .project_gallery
+  /   .project_media
+  /   .project_download
+  /     a.download href='#' 
+  /       img.download alt='#' src='assets/download.png'
