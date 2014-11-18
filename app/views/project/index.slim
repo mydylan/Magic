@@ -1,9 +1,10 @@
 .project_wrapper
   .project_main_frame
-    .video_case
-      video  controls='controls' width='375px' height='225px' poster='video_screen.png'
-        source src='#'
+    .video_bg
+      video class='project_video'  controls='controls' width='374px' height='224px' poster='Magic_zone/app/assets/images/video_screen.png'
+      source src='#'
       / video tag
+  .clr
   .project_about_game
     p.subtitle The Game 
     p.description 
@@ -11,15 +12,15 @@
       br/
       br/
       | You will try on the role of a fortunate thief and assassin in possession of a unique artifact: the Gauntlet of the Celestial Guardian stolen from the adepts of a dark and ancient cult. You will be gifted with wondrous and unique abilities, too. Get ready for an unending adventure full of risk: age-old castles, gloomy dungeons and treacherous enemy ambushes, dozens of most fascinating levels and unique quests. Enter the path full of danger and win the title of Master Shadow!
-    .links
-      .platforms
-        .downloads
-          img.app_store alt='#' src='assets/app_store.png'
-        .downloads
-          img.google_play alt='#' src='assets/google_play.png'
-    .windows
+    .platforms
+      img.app_store alt='#' src='assets/app_store.png'
+      img.google_play alt='#' src='assets/google_play.png'
       img.windows alt='#' src='assets/windows.png'
-  / .project_gallery
+  .clr
+  .project_gallery
+    .gallery_main
+      .gallery_screen
+        img.screen alt='#' src='assets/screenshot.png'
   /   .project_media
   /   .project_download
   /     a.download href='#' 
