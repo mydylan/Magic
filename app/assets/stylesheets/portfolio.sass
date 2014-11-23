@@ -1,9 +1,247 @@
+@import bourbon
+
 .project_gallery
 
 .gallery_main
-  margin: 100px 0
+  background-image: url(portfolio_border.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 13px 0px
+  position: relative
 .gallery_screen
-  margin: 0 auto
+  margin: 70px 0 0 0
+  position: relative
+  padding: 63px 0 29px 0
   img
-    width: 775px
+    position: relative
+    top: -5px
+    display: block
     margin: 0 auto
+    width: 779px
+    margin: 0 auto
+
+
+.button
+  position: relative
+  display: block
+  .button_r
+    position: absolute
+    bottom: 248px
+    right: 27px
+    &:hover::before
+      opacity: 1
+    &::before
+      display:block
+      content: ''
+      background-image: url(button_right_big_active.png)
+      background-position: 4px 0 
+      background-size: cover
+      background-repeat: no-repeat
+      width: 26px
+      height: 73px
+      position: absolute
+      top: 0
+      left: -6px
+      z-index: 10
+      cursor: pointer
+      opacity: 0
+      @include transition(opacity 0.2s)
+    img
+      display: block
+      width: 20px
+      cursor: pointer
+
+  .button_l
+    position: absolute
+    top: 246px
+    left: 28px
+    &:hover::before
+      opacity: 1
+    &::before
+      content: ''
+      display: block
+      background-image: url(button_left_big_active.png)
+      background-position: 4px 0 
+      background-size: cover
+      background-repeat: no-repeat
+      width: 26px
+      height: 73px
+      position: absolute
+      top: 0
+      left: -8px
+      z-index: 10
+      cursor: pointer
+      opacity: 0
+      @include transition(opacity 0.2s)
+    img
+      width: 20px
+      display: block
+      cursor: pointer
+
+
+.button_wrapper
+  position: relative
+  .button_nav
+    position: relative
+    .button_screen
+      position: absolute
+      top: -37px
+      left: 271px
+      &:hover::before
+        opacity: 1
+      &::before
+        content: ''
+        display: block
+        background-image: url(button_screen_active.png)
+        background-size: cover
+        background-repeat: no-repeat
+        width: 147px
+        height: 61px
+        position: absolute
+        top: -11px
+        left: -12px
+        z-index: 10
+        cursor: pointer
+        opacity: 0
+        @include transition(opacity 0.2s)
+      img
+        width: 127px
+        display: block
+        cursor: pointer
+    .button_art
+      position: absolute
+      top: -37px
+      right: 263px
+      &:hover::before
+        opacity: 1
+      &::before
+        content: ''
+        display: block
+        background-image: url(button_art_active.png)
+        background-size: cover
+        background-repeat: no-repeat
+        width: 147px
+        height: 61px
+        position: absolute
+        top: -11px
+        left: -12px
+        z-index: 10
+        cursor: pointer
+        opacity: 0
+        @include transition(opacity 0.2s)
+      img
+        width: 127px
+        display: block
+        cursor: pointer
+
+
+.project_media
+  background: url(media-bg.png) no-repeat
+  background-size: contain
+  background-position: 1px -5px 
+  height: 160px
+  .button_media_wrapper
+    position: relative
+    .button_media
+      position: relative
+      .button_left
+        position: absolute
+        top: 45px
+        left: 22px
+        &:hover::before
+          opacity: 1
+        &::before
+          content: ''
+          display: block
+          background-image: url(button_media_left_active.png)
+          background-size: cover
+          background-repeat: no-repeat
+          width: 26px
+          height: 62px
+          position: absolute
+          top: -4px
+          left: -4px
+          z-index: 10
+          cursor: pointer
+          opacity: 0
+          @include transition(opacity 0.2s)
+        img
+          width: 23px
+          display: block
+          cursor: pointer
+      .button_right
+        position: absolute
+        top: 45px
+        right: 22px
+        &:hover::before
+          opacity: 1
+        &::before
+          content: ''
+          display: block
+          background-image: url(button_media_right_active.png)
+          background-size: cover
+          background-repeat: no-repeat
+          width: 26px
+          height: 62px
+          position: absolute
+          top: -4px
+          right: -3px
+          z-index: 10
+          cursor: pointer
+          opacity: 0
+          @include transition(opacity 0.2s)
+        img
+          width: 23px
+          display: block
+          cursor: pointer
+.project_download
+  position: relative
+  margin: 25px auto
+  width: 396px
+  &:hover::before
+    opacity: 1
+  &::before
+    content: ''
+    display: block
+    background-image: url(download_hover.png)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 397px
+    height: 100px
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 3
+    cursor: pointer
+    opacity: 0
+    @include transition(opacity 0.2s)
+  img
+    opacity: 1
+    width: 100%
+    display: block
+    cursor: pointer
+    z-index: 0
+    &.active
+      opacity: 0
+  &.active
+    display: block
+    background-image: url(download_active.png)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 1px 0px
+    width: 397px
+    height: 103px
+    top: 0
+    left: 0
+    z-index: 20
+    cursor: pointer
+    opacity: 1
+    @include transition(opacity 0.2s)
+
+
+
+
+
+
+
+
