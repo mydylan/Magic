@@ -7,7 +7,10 @@ $(document).ready(function(){
       slide_screenshot = $('.slide_screenshot').children(),
       slide_art = $('.slide_art').children(),
       slider = $('.slider'),
-      display = $('.screen');
+      display = $('.screen'),
+      ad_gallery  = $('.ad_gallery'),
+      image_gallery = $('.gallery');
+
 
   project_download.on('click', function(event){
       event.preventDefault;
@@ -22,6 +25,12 @@ $(document).ready(function(){
   });
 
   screenshot.on('click', function(){
+    image_gallery.on('click', function(){
+      console.log('ad');
+      var mainImage = $(this).attr('src');
+      display.attr({src: mainImage});
+      return false;
+    });
     if(!screenshot.hasClass('active')){
       screenshot.addClass('active'); //change button to active
       slider.html('');
@@ -35,6 +44,12 @@ $(document).ready(function(){
     }
   });
   art.on('click', function(){
+    image_gallery.on('click', function(){
+      console.log('ad');
+      var mainImage = $(this).attr('src');
+      display.attr({src: mainImage});
+      return false;
+    });
     if(!art.hasClass('active')){
       art.addClass('active');
       slider.html('');
@@ -45,10 +60,11 @@ $(document).ready(function(){
       slider.html('');
       slider.append(slide_screenshot.clone());
       screenshot.addClass('active');
-    }
+      }
+  });
+  // GALLERY
+  $(function(){
+    ad_gallery.adGallery();
   });
 
-  (function setBigImage(foto){
-    display.attr('src').append(foto.attr('src').clone());
-  })();
 });
