@@ -16,15 +16,16 @@
       img.google_play alt='#' src='assets/google_play.png'
       img.windows alt='#' src='assets/windows.png'
   .clr
-  .project_gallery
-    .gallery_main
-      .button
-        .button_l
+  .project_gallery#container
+    .ad-gallery#gallery
+      .button.ad-prev
+        .button_l.ad-prev-image
           img alt='#' src='assets/button_left_big.png'
-      .gallery_screen
-        img.screen alt='#' src='assets/screenshot.png'
-      .button
-        .button_r
+      #container.ad-image-wrapper
+        .ad-image
+          img.screen alt='#' src='assets/screenshot.png'
+      .button.ad-next
+        .button_r.ad-next-image
           img alt='#' src='assets/button_right_big.png'
     .button_wrapper
       .button_nav
@@ -34,17 +35,49 @@
         .button_art
           img alt="#" src="assets/button_art.png"
 
-    .project_media
-      .button_media_wrapper
-        .button_media
-          .button_left
-            img alt="#" src="assets/button_media_left.png"
-        .button_media  
-          .button_right
-            img alt="#" src="assets/button_media_right.png"
-    .project_download
-      a.download href='#' 
-        img alt='#' src='assets/download.png'
+    .project_media.ad-nav
+      .button_left.ad-back
+        img alt="#" src="assets/button_media_left.png"  
+      .button_right.ad-forward
+        img alt="#" src="assets/button_media_right.png"
+      .slide_wrapper.ad-thumbs
+        ul.default
+        ul.screenshot
+          li
+            a href="assets/screenshot_1.png"
+              img src="assets/screenshot_1_mini.png" class="image0"
+          li
+            a href="assets/screenshot_2.png"
+              img src="assets/screenshot_2_mini.png" class="image1"
+          li
+            a href="assets/screenshot_3.png"
+              img src="assets/screenshot_3_mini.png" class="image2"
+          li
+            a href="assets/screenshot_4.png"
+              img src="assets/screenshot_4_mini.png" class="image3"
+          li
+            a href="assets/screenshot_5.png"
+              img src="assets/screenshot_5_mini.png" class="image4"
+        ul.art
+          li
+            a href="assets/art_1.png"
+              img src="assets/art_1_mini.png" class="image0"
+          li
+            a href="assets/art_2.png"
+              img src="assets/art_2_mini.png" class="image1"
+          li
+            a href="assets/art_3.png"
+              img src="assets/art_3_mini.png" class="image2"
+          li
+            a href="assets/art_4.png"
+              img src="assets/art_4_mini.png" class="image3"
+          li
+            a href="assets/art_5.png"
+              img src="assets/art_5_mini.png" class="image4"
+      
+  .project_download
+    a.download href='#' 
+      img alt='#' src='assets/download.png'
   .footer
     .contact
       a.copy_writter © Magic Towers 2014
