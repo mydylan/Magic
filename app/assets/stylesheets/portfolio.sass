@@ -1,43 +1,20 @@
 @import bourbon
-.project_gallery
 
 .ad-gallery
+  margin: 130px 0 0 0
+.ad-image-wrapper
   background-image: url(portfolio_border.png)
   background-size: cover
   background-repeat: no-repeat
-  background-position: 13px 0px
+  background-position: 0px 0px
   position: relative
-.ad-image-wrapper
-  margin: 70px 0 0 0
-  position: relative
-  padding: 63px 0 29px 0
-  .ad-image
-    position: relative
-    top: -5px
-    display: block
-    width: 779px
-    margin: 0 auto
-    .screen
-      display: block
-      width: 779px
-
-.ad-thumbs
-  width: 1400px
-
-
-
-
-.slide_wrapper
-  position: absolute
-  top: 25px
-  left: 53px
-.slide_art,
-.slide_screenshot
+.ad-thumbs-lib  
   display: none
-
-.slider
-  display: block
-  img
-    height: 100px
-    margin: 0 5px
-    cursor: pointer
+.screenshot
+  display: none
+  &.active
+    display: block
+.art
+  display: none
+  &.active
+    display: block

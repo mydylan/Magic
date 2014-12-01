@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-2.1.1
-//= require jquery_pixelLayout
 //= require gallery
 
 //= require_tree .

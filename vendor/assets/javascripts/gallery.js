@@ -9,7 +9,7 @@
  */
 (function($) {
   $.fn.adGallery = function(options) {
-    var defaults = { loader_image: 'loader.gif',
+    var defaults = { loader_image: '',
                      start_at_index: 0,
                      thumb_opacity: 0.7,
                      animate_first_image: false,
@@ -31,7 +31,7 @@
                        countdown_sufix: ')'
                      },
                      effect: 'fade', // or 'slide-vert', 'fade', or 'resize', 'none', false
-                     enable_keyboard_move: true,
+                     enable_keyboard_move: false,
                      cycle: true,
                      callbacks: {
                        init: false,
@@ -281,17 +281,7 @@
       this.image_wrapper.append(this.next_link);
       this.image_wrapper.append(this.prev_link);
       var context = this;
-      this.prev_link.add(this.next_link).mouseover(
-        function(e) {
-          // IE 6 hides the wrapper div, so we have to set it's width
-          $(this).css('height', context.image_wrapper_height);
-          $(this).find('div').show();
-        }
-      ).mouseout(
-        function(e) {
-          $(this).find('div').hide();
-        }
-      ).click(
+      this.prev_link.add(this.next_link).click(
         function() {
           if($(this).is('.ad-next')) {
             context.nextImage();
@@ -301,7 +291,7 @@
             context.stopSlideshow();
           };
         }
-      ).find('div').css('opacity', 0.7);
+      ).find('div').css('opacity', 1);
     },
     initBackAndForward: function() {
       var context = this;
@@ -523,22 +513,22 @@
         img_container.css('left', (dif / 2) +'px');
       };
     },
-    _showDescription: function(image, img_container) {
-      var desc = false;
-      if(image.desc.length || image.title.length) {
-        var title = '';
-        if(image.title.length) {
-          title = '<strong class="ad-description-title">'+ image.title +'</strong>';
-        };
-        var desc = '';
-        if(image.desc.length) {
-          desc = '<span>'+ image.desc +'</span>';
-        };
-        var desc = $('<p class="ad-image-description">'+ title + desc +'</p>');
-        img_container.append(desc);
-      };
-      return desc;
-    },
+    // _showDescription: function(image, img_container) {
+    //   var desc = false;
+    //   if(image.desc.length || image.title.length) {
+    //     var title = '';
+    //     if(image.title.length) {
+    //       title = '<strong class="ad-description-title">'+ image.title +'</strong>';
+    //     };
+    //     var desc = '';
+    //     if(image.desc.length) {
+    //       desc = '<span>'+ image.desc +'</span>';
+    //     };
+    //     var desc = $('<p class="ad-image-description">'+ title + desc +'</p>');
+    //     img_container.append(desc);
+    //   };
+    //   return desc;
+    // },
     /**
      * @param function callback Gets fired when the image has loaded and is displaying
      */
@@ -557,9 +547,9 @@
         var image_height = size.height;
         img.attr('width', image_width);
         img.attr('height', image_height);
-        img_container.css({width: image_width +'px', height: image_height +'px', border: '1px solid silver', padding:'2px'});
+        img_container.css({width: '815px', height: '495px'});
         this._centerImage(img_container, image_width, image_height);
-        var desc = this._showDescription(image, img_container);
+        // var desc = this._showDescription(image, img_container);
 
         var thumb = this.nav.find('.ad-thumb'+ index);
         this.highLightThumb(thumb);
@@ -580,9 +570,9 @@
             old_image_animation = {opacity: 0};
             new_image_animation = {opacity: 1};
           } else if(this.settings.effect == 'resize') {
-            var current_left = parseInt(img_container.css('left'), 10);
-            var current_top = parseInt(img_container.css('top'), 10);
-            img_container.css({width: 0, height: 0, top: this.image_wrapper_height / 2, left: this.image_wrapper_width / 2});
+            var current_left = parseInt(img_container.css(''), 10);
+            var current_top = parseInt(img_container.css(''), 10);
+            img_container.css({width: 0, height: 0, top: '58px', left: '62px'});
             old_image_animation = {width: 0,
                                    height: 0,
                                    top: this.image_wrapper_height / 2,

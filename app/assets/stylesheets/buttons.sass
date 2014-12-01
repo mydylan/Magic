@@ -1,177 +1,195 @@
 @import bourbon
 
-.button
-  position: relative
-  display: block
-  .button_r
+.ad-next-image
+  &:hover::before
+    opacity: 1
+  &::before
+    display:block
+    content: ''
+    background-image: url(ad_next_active.png)
+    background-position: 4px 0 
+    background-size: cover
+    background-repeat: no-repeat
+    width: 30px
+    height: 80px
     position: absolute
-    bottom: 248px
-    right: 27px
+    top: -2px
+    left: -7px
+    z-index: 10
+    cursor: pointer
+    opacity: 0
+    @include transition(opacity 0.2s)
+  img
+    display: block
+    width: 20px
+    cursor: pointer
+
+.ad-prev-image
+  &:hover::before
+    opacity: 1
+  &::before
+    content: ''
+    display: block
+    background-image: url(ad_prev_active.png)
+    background-position: 4px 0 
+    background-size: cover
+    background-repeat: no-repeat
+    width: 30px
+    height: 80px
+    position: absolute
+    top: -2px
+    left: -8px
+    z-index: 10
+    cursor: pointer
+    opacity: 0
+    @include transition(opacity 0.2s)
+  img
+    width: 20px
+    display: block
+    cursor: pointer
+
+
+.button_nav
+  position: relative
+  .button_screen
+    background-image: url(button_screen.png)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 130px
+    height: 40px
+    position: absolute
+    top: -37px
+    left: 271px
+    z-index: 20
     &:hover::before
       opacity: 1
     &::before
-      display:block
       content: ''
-      background-image: url(button_right_big_active.png)
-      background-position: 4px 0 
+      display: block
+      background-image: url(button_screen_active.png)
       background-size: cover
       background-repeat: no-repeat
-      width: 26px
-      height: 73px
+      width: 147px
+      height: 61px
       position: absolute
-      top: 0
-      left: -6px
+      top: -11px
+      left: -11px
       z-index: 10
       cursor: pointer
       opacity: 0
       @include transition(opacity 0.2s)
     img
+      width: 127px
       display: block
-      width: 20px
       cursor: pointer
-
-  .button_l
+    // &.active
+    //   background-image: url(button_screen_active.png)
+    //   background-position: 0px 0px
+    //   width: 147px
+    //   height: 61px
+    //   top: -37px
+    //   left: 271px
+  .button_art
+    background-image: url(button_art.png)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 130px
+    height: 40px
     position: absolute
-    top: 246px
-    left: 28px
+    top: -37px
+    right: 264px
+    z-index: 20
     &:hover::before
       opacity: 1
     &::before
       content: ''
       display: block
-      background-image: url(button_left_big_active.png)
-      background-position: 4px 0 
+      background-image: url(button_art_active.png)
       background-size: cover
       background-repeat: no-repeat
-      width: 26px
-      height: 73px
+      width: 147px
+      height: 61px
       position: absolute
-      top: 0
-      left: -8px
+      top: -11px
+      left: -11px
       z-index: 10
       cursor: pointer
       opacity: 0
       @include transition(opacity 0.2s)
     img
-      width: 20px
+      width: 127px
       display: block
       cursor: pointer
 
 
-.button_wrapper
-  position: relative
-  .button_nav
-    position: relative
-    .button_screen
-      position: absolute
-      top: -37px
-      left: 271px
-      z-index: 20
-      &:hover::before
-        opacity: 1
-      &::before
-        content: ''
-        display: block
-        background-image: url(button_screen_active.png)
-        background-size: cover
-        background-repeat: no-repeat
-        width: 147px
-        height: 61px
-        position: absolute
-        top: -11px
-        left: -12px
-        z-index: 10
-        cursor: pointer
-        opacity: 0
-        @include transition(opacity 0.2s)
-      img
-        width: 127px
-        display: block
-        cursor: pointer
-    .button_art
-      position: absolute
-      top: -37px
-      right: 263px
-      z-index: 20
-      &:hover::before
-        opacity: 1
-      &::before
-        content: ''
-        display: block
-        background-image: url(button_art_active.png)
-        background-size: cover
-        background-repeat: no-repeat
-        width: 147px
-        height: 61px
-        position: absolute
-        top: -11px
-        left: -12px
-        z-index: 10
-        cursor: pointer
-        opacity: 0
-        @include transition(opacity 0.2s)
-      img
-        width: 127px
-        display: block
-        cursor: pointer
-
-
-.project_media
+.ad-nav
   background: url(media-bg.png) no-repeat
   background-size: contain
   background-position: 1px -5px 
   height: 160px
   position: relative
-  .button_left
+
+.ad-back
+  &:hover::before
+    opacity: 1
+  &::before
+    content: ''
+    display: block
+    background-image: url(ad_scroll_back_active.png)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 26px
+    height: 62px
     position: absolute
-    top: 45px
-    left: 22px
-    &:hover::before
-      opacity: 1
-    &::before
-      content: ''
-      display: block
-      background-image: url(button_media_left_active.png)
-      background-size: cover
-      background-repeat: no-repeat
-      width: 26px
-      height: 62px
-      position: absolute
-      top: -4px
-      left: -4px
-      z-index: 10
-      cursor: pointer
-      opacity: 0
-      @include transition(opacity 0.2s)
-    img
-      width: 23px
-      display: block
-      cursor: pointer
-  .button_right
+    top: 0px
+    left: -4px
+    z-index: 10
+    cursor: pointer
+    opacity: 0
+    @include transition(opacity 0.2s)
+  img
+    width: 23px
+    display: block
+    cursor: pointer
+
+.ad-forward
+  &:hover::before
+    opacity: 1
+  &::before
+    content: ''
+    display: block
+    background-image: url(ad_scroll_forward_active.png)
+    background-size: cover
+    background-repeat: no-repeat
+    width: 26px
+    height: 62px
     position: absolute
-    top: 45px
-    right: 22px
-    &:hover::before
-      opacity: 1
-    &::before
-      content: ''
-      display: block
-      background-image: url(button_media_right_active.png)
-      background-size: cover
-      background-repeat: no-repeat
-      width: 26px
-      height: 62px
-      position: absolute
-      top: -4px
-      right: -3px
-      z-index: 10
-      cursor: pointer
-      opacity: 0
-      @include transition(opacity 0.2s)
-    img
-      width: 23px
-      display: block
-      cursor: pointer
+    top: 0px
+    right: 0px
+    z-index: 10
+    cursor: pointer
+    opacity: 0
+    @include transition(opacity 0.2s)
+  img
+    width: 23px
+    display: block
+    cursor: pointer
+
+// a
+//   &:hover
+//     display: block
+//     background-image: url(border_active.png)
+//     background-size: cover
+//     background-repeat: no-repeat
+//     background-position: 0px  0px 
+//     width: 160px
+//     height: 120px
+//     position: absolute
+//     cursor: pointer
+//     opacity: 1
+//     z-index: 30
+          
+
 .project_download
   position: relative
   margin: 25px auto
