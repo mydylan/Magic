@@ -1,12 +1,13 @@
 @import bourbon
-
+#container
+  margin: -30px 0 0 0 
 .ad-gallery
   margin: 130px 0 0 0
 .ad-image-wrapper
   background-image: url(portfolio_border.png)
   background-size: cover
   background-repeat: no-repeat
-  background-position: 0px 0px
+  background-position: -1px 0px
   position: relative
 .ad-thumbs-lib  
   display: none
@@ -18,3 +19,24 @@
   display: none
   &.active
     display: block
+.ad-image-wrapper
+  img
+    width: 815px !important
+    height: 495px !important
+.mini
+  width: 114px 
+  height: 73px
+.ad-thumbs
+  a
+    width: 150px
+    height: 114px
+    &.ad-active
+      background-image: url(border_active.png)
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: 0px 0px
+    &:hover
+      background-image: url(border_active.png)
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: 0px 0px

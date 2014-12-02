@@ -27,6 +27,8 @@ $(document).ready(function(){
     slider.html('');
     slider.append(screenshot.children().clone());
     screenshot.addClass('active');
+    slider.children().find('a').removeClass('ad-active');
+    var galleries = $('.ad-gallery').adGallery();
   });
 
   button_art.on('click', function(){
@@ -34,6 +36,7 @@ $(document).ready(function(){
     slider.html('');
     slider.append(art.children().clone());
     art.addClass('active');
+    var galleries = $('.ad-gallery').adGallery();
   });
   // screenshot.on('click', function(){
   //   image_gallery.on('click', function(){

@@ -164,7 +164,7 @@
       this.image_wrapper.empty();
       this.nav = this.wrapper.find('.ad-nav');
       this.thumbs_wrapper = this.nav.find('.ad-thumbs');
-      this.preloads = $('<div class="ad-preloads"></div>');
+      this.preloads = $('');
       this.loader = $('<img class="ad-loader" src="'+ this.settings.loader_image +'">');
       this.image_wrapper.append(this.loader);
       this.loader.hide();

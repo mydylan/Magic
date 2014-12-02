@@ -162,18 +162,19 @@ background: url(non-existing.jpg)\9
 }
 .ad-gallery .ad-nav .ad-thumbs {
 	overflow: hidden;
-	width: 85%;
+	width: 89%;
 	
 }
 .ad-gallery .ad-thumbs ul {
 	float: left;
 	width: 9000px;
 	list-style: none;
+	margin: 15px 0;
 	
 }
 .ad-gallery .ad-thumbs li {
 	float: left;
-  padding: 20px 10px 0 10px;
+/*  	padding: 10px 5px 0 10px;*/
 	
 }
 .ad-gallery .ad-thumbs li a {
@@ -183,14 +184,14 @@ background: url(non-existing.jpg)\9
 .ad-gallery .ad-thumbs li a img {
 	border: 3px solid #7e4427;
 	display: block;
-  opacity: 1 !important;
-  position: relative;
-  z-index: 4;
+  	opacity: 1 !important;
+  	position: relative;
+  	z-index: 4;
+  	top: 18px;
 	
 }
 .ad-gallery .ad-thumbs li a.ad-active img {
 	border: 3px solid #3b54ee;
-	
 }
 /* Can't do display none, since Opera won't load the images then */
 .ad-preloads {
